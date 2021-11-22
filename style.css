@@ -127,14 +127,12 @@ main.cards section.card h3{
   align-items: center;
   display: flex;
   font-family:Georgia, 'Times New Roman', Times, serif;
+
 }
 .icon{
   display: block;
 }
-.post{
-  display: none;
- 
-}
+
 
 #perfil{
   width: 200px;

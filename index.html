@@ -32,20 +32,20 @@
 <body>
     <main class="cards">
         
-        <section class="card">
+        <section class="card" id="dashboard">
             <div class="icon">
                 <img src="img/facebook.png" alt="facebook">            
                 <h3>Facebook</h3>
                 <button id="btnFacebook" onclick="login()"> Login</button>
-            </div>
-        
+                <div id="img-usiario"></div>
+            </div>        
         </section>
 
     
-        <div id="publicarPost"class="post">
+        <div id="publicarPost" class="card">
             <form>                
                     <label for="perfil"> 1. Selecione o perfil: </label><br/> 
-                    <a href="https://graph.facebook.com/4316391405155414/picture?width=148&height=116">Facebook</a>                   
+                                     
                     <input type="type" id="perfil" name="perfilConectado"><br/>
 
                     <label for="canal"> 2. Selecione o canal: </label><br/>
@@ -65,6 +65,8 @@
                     <input type="text" type="image" id="publicacao" name="previaPublicação"><br/>
             </form>               
         </div>
+
+        
             
               
        
