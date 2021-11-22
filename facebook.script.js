@@ -32,11 +32,12 @@ function statusChangeCallback(response) {  // Called with the results from FB.ge
 
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '591546841976463',
+      appId      : '4316391405155414',
       cookie     : true,                     // Enable cookies to allow the server to access the session.
       xfbml      : true,                     // Parse social plugins on this webpage.
       version    : 'v12.0'           // Use this Graph API version for this call.
     });
+  
 
 
     FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
@@ -52,3 +53,5 @@ function statusChangeCallback(response) {  // Called with the results from FB.ge
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+
+  
