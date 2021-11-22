@@ -38,32 +38,21 @@ function statusChangeCallback(response) {  // Called with the results from FB.ge
       version    : 'v12.0'           // Use this Graph API version for this call.
     });
   
-    
-
+   
     FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
       statusChangeCallback(response);        // Returns the login status.
     });
-
-    FB.AppEvents.logPageView();   
-      
   };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
   
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-    console.log('Welcome!  Fetching your information.... ');
+    console.log('Bem-vindo! Buscando suas informações ....');
     FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
+      console.log('Login bem-sucedido para: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Obrigado por fazer login, ' + response.name + '!';
     });
   }
+
 
   
