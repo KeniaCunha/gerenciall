@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciall Social Networks</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="facebook.script.js"></script>
+
+   
+</head>
+<header> 
+    <nav id="nav">   
+
+    <ul id="menu">
+        <li id="inicio"> <a href="#">  <img class="icon-header" src="img/dashboard.png"> 
+            Dashboard </a> </li> 
+        <li id="publicar"> <a href="#">  <img class="icon-header" src="img/agendar.png"> 
+                Publicar Post</a> </li> 
+        <li> <a href=""> <img class="icon-header" src="img/marketing.png"> 
+            Ads </a> </li>
+        <li> <a href=""> <img class="icon-header" src="img/calendar.png"> 
+             Calendário </a> </li>
+    </ul>    
+</nav>
+
+     
+</header>
+<body>
+    <main class="cards">
+        
+        <section class="card">
+            <div class="icon">
+                <img src="img/facebook.png" alt="facebook">            
+                <h3>Facebook</h3>
+                <button id="btnFacebook" onclick="login()"> Login</button>
+            </div>
+        
+        </section>
+
+    
+        <div id="publicarPost"class="post">
+            <form>                
+                    <label for="perfil"> 1. Selecione o perfil: </label>
+                    <input type="email" id="perfil" name="perfilRedeSocial"><br/>
+
+                    <label for="canal"> 2. Selecione o canal: </label>
+                    <input type="image" id="canal" src="img/facebook.png" alt="facebook"><br/>
+               
+                    <label for="legenda"> 3. Selecione a data: </label>
+                    <input type="date" id="data" ><br/>
+
+                    <label for="legenda"> 4. Descrição: </label>
+                    <input type="text" id="legenda" name="legendaPublicação"><br/>
+                
+                    <label for="midia"> 5. Midias: </label>
+                    <input type="file" id="midia" name="midiaPublicação"><br/>
+
+                    <label for="publicacao"> PREVIEW: </label>
+                    <input type="text" type="image" id="publicacao" name="previaPublicação"><br/>
+            </form>               
+        </div>
+            
+              
+       
+        <script src="publicarpost.js"></script>
+    </main>
+     
+ <!-- Load the JS SDK asynchronously -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  
+  
+}
+
+
+header a{
+  text-decoration: none;
+  color: black;
+}
+ul{
+
+list-style-type: none;
+display: flex;
+text-align: center;
+justify-content: space-around;
+background-image: linear-gradient(to bottom,rgb(245, 242, 242),rgb(59, 73, 114));
+color: rgb(0, 0, 0);
+padding: 15px;
+font-size: 20px;
+overflow: auto;
+
+}
+
+.icon-header{
+  width: 50px;
+  padding: 5px;
+  display: block;
+  margin: auto;
+}
+
+main{
+  
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  
+}
+
+main.cards section.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 40px 100px 80px 100px;
+  border-radius: 8px;
+  max-height: 256px;
+  max-width: 256px;
+  margin: 30px;
+
+}
+main.cards{
+  display: flex;
+  padding: 20px;
+}
+
+
+main.cards section.card img{
+  width: 70px;
+
+}
+
+main.cards section.card h3{
+  margin: 20px 0;
+  font-weight:25px ;
+  text-decoration: none;
+}
+
+#btn-mobile{
+  display: none;
+}
+
+#btnFacebook{
+  width: 100px;
+  padding: 5px;
+  background-color: #4267b2;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  border-radius: 5px;
+  border: none;
+}
+#btnFacebook:hover{
+  background-color: rgb(230, 224, 224);
+  color: #4267b2;
+}
+
+#legenda{
+  width: 200px;
+  height:200px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  background-image: linear-gradient(to bottom,rgb(245, 242, 242),rgb(141, 158, 207));
+}
+#midia{
+  width: 200px;
+  height: 40px;
+  size: 40;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  background-image: linear-gradient(to bottom,rgb(245, 242, 242),rgb(141, 158, 207));
+}
+
+#canal{
+  width: 40px;
+  height: 40px;
+}
+
+#publicarPost{
+  color: blue;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  
+
+}
+.icon{
+  display: block;
+}
+.post{
+  display: none;
+ 
+}
+
+#perfil{
+  width: 200px;
+  height: 40px;
+  size: 40;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  background-image: linear-gradient(to bottom,rgb(245, 242, 242),rgb(141, 158, 207));
+}
+
+#publicacao{
+  width: 200px;
+  height:300px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  background-image: linear-gradient(to bottom,rgb(245, 242, 242),rgb(141, 158, 207));;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  #menu{
+    display: none;
+   }
+ 
+
+
+
+
+}
+
