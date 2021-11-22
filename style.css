@@ -11,16 +11,15 @@ header a{
   color: black;
 }
 ul{
-
-list-style-type: none;
-display: flex;
-text-align: center;
-justify-content: space-around;
-background-image: linear-gradient(to bottom,rgb(245, 242, 242),rgb(59, 73, 114));
-color: rgb(0, 0, 0);
-padding: 15px;
-font-size: 20px;
-overflow: auto;
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  background-image: linear-gradient(to bottom,rgb(245, 242, 242),rgb(59, 73, 114));
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  font-size: 20px;
+  overflow: auto;
 
 }
 
@@ -35,7 +34,6 @@ main{
   
   height: 100vh;
   width: 100%;
-
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -115,15 +113,20 @@ main.cards section.card h3{
 #canal{
   width: 40px;
   height: 40px;
+  margin: 10px;
+}
+
+#data{
+  margin: 10px;
 }
 
 #publicarPost{
-  color: blue;
+  color: rgb(54, 38, 129);
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  
-
+  display: flex;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .icon{
   display: block;
@@ -151,7 +154,7 @@ main.cards section.card h3{
   border: none;
   padding: 10px;
   margin: 10px;
-  background-image: linear-gradient(to bottom,rgb(245, 242, 242),rgb(141, 158, 207));;
+  background-image: linear-gradient(to bottom,rgb(245, 242, 242),rgb(141, 158, 207));
 }
 
 

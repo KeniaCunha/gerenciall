@@ -1,4 +1,3 @@
- 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -45,23 +44,24 @@
     
         <div id="publicarPost"class="post">
             <form>                
-                    <label for="perfil"> 1. Selecione o perfil: </label>
-                    
-                    <input type="email" id="perfil" name="perfilRedeSocial"><br/>
+                    <label for="perfil"> 1. Selecione o perfil: </label><br/> 
+                    <a href="https://graph.facebook.com/4316391405155414/picture?width=148&height=116">Facebook</a>                   
+                    <input type="type" id="perfil" name="perfilConectado"><br/>
 
-                    <label for="canal"> 2. Selecione o canal: </label>
+                    <label for="canal"> 2. Selecione o canal: </label><br/>
                     <input type="image" id="canal" src="img/facebook.png" alt="facebook"><br/>
                
-                    <label for="legenda"> 3. Selecione a data: </label>
+                    <label for="legenda"> 3. Selecione a data: </label><br/>
                     <input type="date" id="data" ><br/>
 
-                    <label for="legenda"> 4. Descrição: </label>
+                    <label for="legenda"> 4. Descrição: </label><br/>
                     <input type="text" id="legenda" name="legendaPublicação"><br/>
                 
-                    <label for="midia"> 5. Midias: </label>
-                    <input type="file" id="midia" name="midiaPublicação"><br/>
+                    <label for="midia"> 5. Mídias: </label><br/>
+                    <input type="file" id="midia" name="midiaPublicação">
+                    <button type="button" onclick="alert('Mídia enviada')">Enviar</button><br/>
 
-                    <label for="publicacao"> PREVIEW: </label>
+                    <label for="publicacao"> PREVIEW: </label><br/>
                     <input type="text" type="image" id="publicacao" name="previaPublicação"><br/>
             </form>               
         </div>
@@ -71,7 +71,7 @@
         <script src="publicarpost.js"></script>
     </main>
      
- <!-- Load the JS SDK asynchronously -->
+ <!-- Carregue o JS SDK de forma assíncrona -->
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
 </html>

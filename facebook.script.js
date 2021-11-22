@@ -43,10 +43,7 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
       statusChangeCallback(response);        // Retorna o status de login.
     });
   };
-    FB.logout(function(response) {
-    // Pessoa agora está desconectada
-    });
- 
+
   function testAPI() {                      // Testando Graph API após o login.  Veja statusChangeCallback() para saber quando esta chamada é feita..
     console.log('Bem-vindo! Buscando suas informações ....');
     FB.api('/me', function(response) {
@@ -54,7 +51,7 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
       document.getElementById('status').innerHTML =
         'Obrigado por fazer login, ' + response.name + '!';
    
-  $('$foto').html('<img src="https://graph.facebook.com/' + response.username +'/picture" alt="'+ response.name +'"/>')
+
 });
 }
 
