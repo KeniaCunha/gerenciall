@@ -18,7 +18,7 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
 
             FB.api('/me', function(response) {
               console.log(response)
-              document.getElementById('perfil-conectado').innerHTML = response.name;
+              document.getElementById('perfil-conectado').innerHTML = AAAAA;
             });
             
             const userId = response.authResponse.userID;
