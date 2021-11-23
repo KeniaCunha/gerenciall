@@ -55,9 +55,7 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
       //   'Obrigado por fazer login, ' + response.name + '!';
     
       console.log(response)
-        document.getElementById('perfil-conectado').innerHTML = response.name;s
-   
-
+      document.getElementById('perfil-conectado').innerHTML = response.name;
   });
 }
 
