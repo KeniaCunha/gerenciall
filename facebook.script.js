@@ -16,7 +16,7 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
             document.getElementById('btnFacebook').innerHTML = 'Conectado';
             document.getElementById('btnFacebook').style.background  =  'green';
 
-            document.getElementById('img-usiario').innerHTML = '<img src="https://graph.facebook.com/' + response.username +'/picture" alt="'+ response.name +'"/>';
+            document.getElementById('img-usuario').innerHTML = '<img src="https://graph.facebook.com/' + response.username +'/picture" alt="'+ response.name +'"/>';
             //Conectado à sua página da web e Facebook.
         } else {
             // a pessoa não está logada em sua página da web ou não podemos saber. 
