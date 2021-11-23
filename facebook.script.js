@@ -13,8 +13,8 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
   function login() {
     FB.login(function(response) {
         if (response.status === 'connected') {
-            document.getElementById('btnFacebook').innerHTML = 'Conectado';
-            document.getElementById('btnFacebook').style.background  =  'green';
+            // document.getElementById('btnFacebook').innerHTML = 'Conectado';
+            // document.getElementById('btnFacebook').style.background  =  'green';
 
             console.log(response.authResponse);
             const userId = response.authResponse.userID;
