@@ -24,7 +24,7 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
         } else {
             // a pessoa não está logada em sua página da web ou não podemos saber. 
         }
-    });
+    }, {scope: 'email,public_profile'});
   }
 
 
