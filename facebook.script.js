@@ -15,9 +15,12 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
         if (response.status === 'connected') {
             document.getElementById('btnFacebook').innerHTML = 'Conectado';
             document.getElementById('btnFacebook').style.background  =  'green';
-            document.getElementById('perfil-conectado').innerHTML = response.authResponse.userID
 
-            console.log(response);
+            FB.api('/me', function(response) {
+              console.log(response)
+              document.getElementById('perfil-conectado').innerHTML = response.name;
+            });
+            
             const userId = response.authResponse.userID;
             document.getElementById('img-usuario').innerHTML = '<img src="https://graph.facebook.com/' + userId +'/picture" alt="'+ response.name +'"/>';
             //Conectado à sua página da web e Facebook.
