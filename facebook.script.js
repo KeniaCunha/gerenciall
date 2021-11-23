@@ -15,11 +15,6 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
         if (response.status === 'connected') {
             document.getElementById('btnFacebook').innerHTML = 'Conectado';
             document.getElementById('btnFacebook').style.background  =  'green';
-
-            FB.api('/me', function(response) {
-              console.log(response)
-              document.getElementById('perfil-conectado').innerHTML = AAAAA;
-            });
             
             const userId = response.authResponse.userID;
             document.getElementById('img-usuario').innerHTML = '<img src="https://graph.facebook.com/' + userId +'/picture" alt="'+ response.name +'"/>';
@@ -55,9 +50,12 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
   function testAPI() {                      // Testando Graph API após o login.  Veja statusChangeCallback() para saber quando esta chamada é feita..
     console.log('Bem-vindo! Buscando suas informações ....');
     FB.api('/me', function(response) {
-      console.log('Login bem-sucedido para: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Obrigado por fazer login, ' + response.name + '!';
+      // console.log('Login bem-sucedido para: ' + response.name);
+      // document.getElementById('status').innerHTML =
+      //   'Obrigado por fazer login, ' + response.name + '!';
+    
+      console.log(response)
+        document.getElementById('perfil-conectado').innerHTML = response.name;s
    
 
   });
