@@ -19,11 +19,11 @@
         <li id="inicio"> <a href="#">  <img class="icon-header" src="img/dashboard.png"> 
             Dashboard </a> </li> 
         <li id="publicar"> <a href="#">  <img class="icon-header" src="img/agendar.png"> 
-                Publicar Post</a> </li> 
+            Publicar Post</a> </li> 
         <li> <a href=""> <img class="icon-header" src="img/marketing.png"> 
             Ads </a> </li>
         <li> <a href=""> <img class="icon-header" src="img/calendar.png"> 
-             Calendário </a> </li>
+            Calendário </a> </li>
     </ul>    
 </nav>
 
@@ -43,30 +43,34 @@
     
         <div id="publicarPost" class="card">
             <form>                
-                    <label for="perfil"> 1. Perfil Conectado: <span id="perfil-conectado"></span> </label><br/> 
-                    <div id="img-usuario"></div>
-                                            
+                <label for="perfil"> 1. Perfil Conectado: <span id="perfil-conectado"></span> </label><br/> 
+                <div id="img-usuario"></div>                                 
 
-                    <label for="canal"> 2. Selecione o canal: </label><br/>
-                    <input type="image" id="canal" src="img/facebook.png" alt="facebook"><br/>
-               
-                    <label for="legenda"> 3. Selecione a data: </label><br/>
-                    <input type="date" id="data" ><br/>
+                <label for="data"> 2. Selecione a data: </label><br/>
+                <input type="date" id="data" ><br/>
 
-                    <label for="legenda"> 4. Descrição: </label><br/>
-                    <input type="text" id="legenda" name="legendaPublicação"><br/>
+                <label for="legenda"> 3. Descrição: </label><br/>
+                <textarea name="legendaPublicação" id="legenda" cols="40" rows="5"></textarea><br/>
                 
-                    <label for="midia"> 5. Mídias: </label><br/>
-                    <input type="file" id="midia" name="midiaPublicação">
-                    <button type="button" onclick="alert('Mídia enviada')">Enviar</button><br/>
+                <div class ="previa">
+                    
+                    <label for="midia"> 4. Mídias: </label><br/>
+                    <input type="file" id="midia" accept="file_extension|audio/*|video/*|image/*|media_type" onchange="carregaArquivo(event)"> 
+                    <button type="button" onclick="alert('Mídia enviada')">Enviar</button><br/><br/><br/>
+                    <img src="img/profile.png" alt="Sem imagem"><br/> 
+                    <div class="fecha-preview-js fecha-preview">x</div>  
+                    
+                    <div id="publicacao">
+                        <h3> PREVIEW: </h3><br/>
+                    </div>
+                </div> 
 
-                    <label for="publicacao"> PREVIEW: </label><br/>
-                    <input type="text" type="image" id="publicacao" name="previaPublicação"><br/>
-            </form>               
-        </div>
-
+            </form>
+           
+        </div>         
         
-            
+                          
+   
               
        
         <script src="publicarpost.js"></script>

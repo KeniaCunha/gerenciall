@@ -25,3 +25,17 @@ function mostrarConteudo(conteudoId) {
 }
 
 mostrarConteudo('dashboard')
+
+var carregaArquivo = function(event){
+    var leitura = new FileReader();
+    leitura.onload = function() {
+        var btnFecha = document.querySelector('.fecha-preview-js');
+        var saida = document.getElementById("publicacao");
+
+        saida.style.display = "block";
+        saida.style.backgroundImage = "url("+ leitura.result + ")";
+    }
+    leitura.readAsDataURL(event.target.files[0]);
+
+}
+
