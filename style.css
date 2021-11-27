@@ -1,144 +1,157 @@
-header a{
-  text-decoration: none;
-  color: black;
-}
-ul{
-  list-style-type: none;
-  display: flex;
-  text-align: center;
-  justify-content: space-around;
-  background: white;
-  color: rgb(0, 0, 0);
-  padding: 15px;
-  font-size: 20px;
-  overflow: auto;
-
+* {
+margin: 0;
 }
 
-.icon-header{
-  width: 50px;
-  padding: 5px;
-  display: block;
-  margin: auto;
+header a {
+text-decoration: none;
+color: black;
 }
 
-main{
-  
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: 1200px;
-  
+ul {
+list-style-type: none;
+display: flex;
+text-align: center;
+justify-content: space-around;
+background: white;
+color: rgb(0, 0, 0);
+padding: 15px;
+font-size: 20px;
+overflow: auto;
 }
 
-
-main.cards{
-  padding: 20px;
+.icon-header {
+width: 50px;
+padding: 5px;
+display: block;
+margin: auto;
 }
 
+body {
+background-color: lightgray;
+}
+
+main {
+height: 34em;
+width: 100%;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin: 0 auto;
+max-width: 1200px;  
+}
+
+main.cards {
+padding: 20px;
+}
 
 main.cards section.card img{
   width: 100px;
 }
 
-main.cards section.card h3{
-  margin: 20px 0;
-  font-weight:25px ;
-  text-decoration: none;
+main.cards section.card h3 {
+margin: 20px 0;
+font-weight:25px ;
+text-decoration: none;
 }
 
-#btn-mobile{
-  display: none;
-}
-
-body{
-  background-color:#dddfe2;
-}
-
-#btnFacebook{
-  width: 100px;
-  padding: 5px;
-  background-color: #4267b2;
-  color: white;
-  font-family: Helvetica, sans-serif;
-  border-radius: 5px;
-  border: none;
-
-}
-#btnFacebook:hover{
-  background-color: rgb(230, 224, 224);
-  color: #4267b2;
-}
-
-#legenda ::after{
-  content: '|';
-  margin-left: 5px;
-  opacity: 1;
-  
-}
-#legenda{
-  width: 200px;
-  height:200px;
-  border-radius: 5px;
-  border: none;
-  padding: 10px;
-  margin: 10px;
-  background-color: white;
-}
-#midia {
-  border: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-#data{
-  margin: 10px;
-  border-radius: 2px;
-  align-items:flex-end;
-}
 main.cards section.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: white;
-    padding: 45px 100px 45px 100px;
-    border-radius: 8px;
-    max-height: 256px;
-    max-width: 257px;
-    margin: 28px;
-    justify-content: space-around;
-    align-items: flex-start;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 45px 100px 45px 100px;
+  border-radius: 8px;
+  max-height: 256px;
+  max-width: 257px;
+  margin: 28px;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
-#publicarPost{
+footer {
+text-align: center;
+background-color: rgb(128,128,128);
+padding: 40px 0;
+}
+
+.copyright {
+color: #000000;
+font-size: 14px;
+margin: 20px 0 0;
+}
+
+#btn-mobile {
+display: none;
+}
+
+#btnFacebook {
+width: 100px;
+padding: 5px;
+background-color: #4267b2;
+color: white;
+font-family: Helvetica, sans-serif;
+border-radius: 5px;
+border: none;
+}
+
+#btnFacebook:hover {
+background-color: rgb(230, 224, 224);
+color: #4267b2;
+}
+
+#legenda ::after {
+content: '|';
+margin-left: 5px;
+opacity: 1;  
+}
+
+#legenda {
+width: 200px;
+height:200px;
+border-radius: 5px;
+border: none;
+padding: 10px;
+margin: 10px;
+background-color: white;
+}
+
+#midia {
+border: none;
+padding: 10px;
+margin: 10px;
+}
+
+#data {
+margin: 10px;
+border-radius: 2px;
+align-items:flex-end;
+}
+
+#publicarPost {
   color:  #0c0c0c;
 }
 
-#perfil{
-  width: 200px;
-  height: 40px;
-  size: 40;
-  border-radius: 5px;
-  border: none;
-  padding: 10px;
-  margin: 10px;
-  background-color: white;
+#perfil {
+width: 200px;
+height: 40px;
+size: 40;
+border-radius: 5px;
+border: none;
+padding: 10px;
+margin: 10px;
+background-color: white;
 }
 
 
 .previa img {
-  max-width: 300px; 
-  align-items: center;
-    
+max-width: 300px; 
 }
+
 .previa:hover .editar-conteudo {
-  opacity: 1;
+opacity: 1;
 }
+
 .previa {
   position: relative;
   width: 300px;
@@ -242,10 +255,112 @@ main.cards section.card{
   border: none;
 }
 
+/* CSS DO CALENDÁRIO */
 
-@media screen and (max-width: 600px) {
-  #menu{
-    display: none;
-   }
+
+.estrutura {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Quicksand", sans-serif;
 }
 
+
+.container {
+width: 100%;
+height: 100vh;
+background-color: lightgray;
+color: #eee;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.calendario {
+width: 45rem;
+height: 52rem;
+background-color: #222227;
+box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.mes {
+width: 100%;
+height: 12rem;
+background-color: #777;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 2rem;
+text-align: center;
+text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.mes i {
+font-size: 2.5rem;
+cursor: pointer;
+}
+
+.mes h1 {
+font-size: 3rem;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+margin-bottom: 1rem;
+}
+
+.mes p {
+font-size: 1.6rem;
+}
+
+.diasDaSemana {
+width: 100%;
+height: 5rem;
+padding: 0 0.4rem;
+display: flex;
+align-items: center;
+}
+
+.diasDaSemana div {
+font-size: 1.5rem;
+font-weight: 400;
+letter-spacing: 0.1rem;
+width: calc(44.2rem / 7);
+display: flex;
+justify-content: center;
+align-items: center;
+text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.dias {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+padding: 0.2rem;
+}
+
+.dias div {
+font-size: 1.4rem;
+margin: 0.3rem;
+width: calc(40.2rem / 7);
+height: 5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+transition: background-color 0.2s;
+}
+
+.dias div:hover:not(.hoje) {
+background-color: #262626;
+border: 0.2rem solid #777;
+cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+opacity: 0.5;
+}
+
+.hoje {
+background-color: #777;
+}
