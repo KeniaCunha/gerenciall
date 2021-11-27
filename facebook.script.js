@@ -27,6 +27,7 @@ botaoPublicarPost.addEventListener('click', function() {
   var body = 'Lendo documentação JS SDK ';
   FB.api('/me/feed', 'post', { message: body }, function(response) {
     if (!response || response.error) {
+      console.log(response.error);
       alert('Ocorreu um erro');
     } else {
       alert('Post ID: ' + response.id);
