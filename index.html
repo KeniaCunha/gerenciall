@@ -42,39 +42,43 @@
 
     
         <div id="publicarPost" class="card">
-            <form>                
+            
+            <div class="formulario"> 
+
                 <label for="perfil"> 1. Perfil Conectado: <span id="perfil-conectado"></span> </label><br/> 
-                <div id="img-usuario"></div>                                 
+                <div id="img-usuario"></div><br/>                                 
 
                 <label for="data"> 2. Selecione a data: </label><br/>
                 <input type="date" id="data" ><br/>
 
                 <label for="legenda"> 3. Descrição: </label><br/>
                 <textarea name="legendaPublicação" id="legenda" cols="40" rows="5"></textarea><br/>
-                
-                <div class ="previa">
-                    
-                    <label for="midia"> 4. Mídias: </label><br/>
-                    <input type="file" id="midia" accept="file_extension|audio/*|video/*|image/*|media_type" onchange="carregaArquivo(event)"> 
-                    <button type="button" onclick="alert('Mídia enviada')">Enviar</button><br/><br/><br/>
-                    <img src="img/profile.png" alt="Sem imagem"><br/> 
-                    <div class="fecha-preview-js fecha-preview">x</div>  
-                    
-                    <div id="publicacao">
-                        <h3> PREVIEW: </h3><br/>
-                    </div>
-                </div> 
+                <button id="botaoTextarea" type="button">Exibir Texto</button> <br/><br/>
 
-            </form>
+                <label for="midia"> 4. Mídias: </label>
+                <input type="file" id="midia" accept="image/*" onchange="carregaArquivo(event)">
+                <input type="submit" value="Enviar"><br><br>
+            </div>      
+            <div class="previa">
+                <div class="editar-conteudo">
+                    <span>
+                        <i>Editar</i>
+                    </span>
+                </div>
+                <h3> PREVIEW: </h3><br/>
+                <p id="publicacao-texto"></p><br/>
+                <div id="publicacao"> 
+                    <div class="fecha-preview-js fecha-preview">x</div> 
+                </div>
+
+            </div>           
            
-        </div>         
+        </div>   
         
-                          
-   
-              
-       
+        <script src="facebook.script.js"></script>      
+
         <script src="publicarpost.js"></script>
-        <script src="facebook.script.js"></script>
+        
     </main>
      
  <!-- Carregue o JS SDK de forma assíncrona -->

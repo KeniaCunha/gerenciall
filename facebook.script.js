@@ -25,7 +25,15 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
     });
   }
 
-
+/* fazer a chamada API */
+  FB.api(
+    "/{post-id}/to",
+    function (response) {
+      if (response && !response.error) {
+        /* lidar com o resultado */
+      }
+    }
+  );
   function checkLoginState() {               // Chamado quando uma pessoa termina com o botão de login.
     FB.getLoginStatus(function(response) {   // Veja o manipulador de onlogin 
       statusChangeCallback(response);
