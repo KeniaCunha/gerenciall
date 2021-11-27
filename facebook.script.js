@@ -3,15 +3,12 @@ function statusChangeCallback(response) {  // Chamado com os resultados de FB.ge
   console.log(response);                   // O status de login atual da pessoa.
   if (response.status === 'connected') {   // Logado em sua página da web e Facebook.
     testAPI();
-  } else {                                 // Não está conectado à sua página da web ou não podemos saber.
-    document.getElementById('status').innerHTML = 'Por favor logue ' +
-      'nesta página da web.';
   }
 }
 
 
 function login() {
-  FB.login(function (response) {
+  FB.login(function(response) {
     if (response.status === 'connected') {
       document.getElementById('btnFacebook').innerHTML = 'Conectado';
       document.getElementById('btnFacebook').style.background = 'green';
@@ -26,9 +23,9 @@ function login() {
 }
 
 var botaoPublicarPost = document.getElementById('botaoPublicar');
-botaoPublicarPost.addEventListener('click', function () {
+botaoPublicarPost.addEventListener('click', function() {
   var body = 'Lendo documentação JS SDK ';
-  FB.api('/me/feed', 'post', { message: body }, function (response) {
+  FB.api('/me/feed', 'post', { message: body }, function(response) {
     if (!response || response.error) {
       alert('Ocorreu um erro');
     } else {
@@ -40,13 +37,13 @@ botaoPublicarPost.addEventListener('click', function () {
 
 
 function checkLoginState() {               // Chamado quando uma pessoa termina com o botão de login.
-  FB.getLoginStatus(function (response) {   // Veja o manipulador de onlogin 
+  FB.getLoginStatus(function(response) {   // Veja o manipulador de onlogin 
     statusChangeCallback(response);
   });
 }
 
 
-window.fbAsyncInit = function () {
+window.fbAsyncInit=function() {
   FB.init({
     appId: '4316391405155414',
     cookie: true,                     //  Habilite os cookies para permitir que o servidor acesse a sessão
@@ -55,14 +52,14 @@ window.fbAsyncInit = function () {
   });
 
 
-  FB.getLoginStatus(function (response) {   // Chamado depois que o JS SDK foi inicializado.
-    statusChangeCallback(response);        // Retorna o status de login.
-  });
+  // FB.getLoginStatus(function(response) {   // Chamado depois que o JS SDK foi inicializado.
+  //   statusChangeCallback(response);        // Retorna o status de login.
+  // });
 };
 
 function testAPI() {                      // Testando Graph API após o login.  Veja statusChangeCallback() para saber quando esta chamada é feita..
   console.log('Bem-vindo! Buscando suas informações ....');
-  FB.api('/me', function (response) {
+  FB.api('/me', function(response) {
     // console.log('Login bem-sucedido para: ' + response.name);
     // document.getElementById('status').innerHTML =
     //   'Obrigado por fazer login, ' + response.name + '!';

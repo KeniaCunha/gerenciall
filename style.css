@@ -120,12 +120,14 @@ background-color: white;
 border: none;
 padding: 10px;
 margin: 10px;
+cursor: pointer;
 }
 
 #data {
 margin: 10px;
 border-radius: 2px;
 align-items:flex-end;
+cursor: pointer;
 }
 
 #publicarPost {
@@ -144,10 +146,6 @@ background-color: white;
 }
 
 
-.previa img {
-max-width: 300px; 
-}
-
 .previa:hover .editar-conteudo {
 opacity: 1;
 }
@@ -156,7 +154,7 @@ opacity: 1;
   position: relative;
   width: 300px;
   height: 300px;
-  float: right  
+  float: right;
 }
 
 .formulario{
@@ -164,7 +162,6 @@ opacity: 1;
 
 }
 .previa h3 {
-
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   
@@ -242,7 +239,11 @@ opacity: 1;
   font-family: Helvetica, sans-serif;
   border-radius: 5px;
   border: none;
-  float: right; 
+  align-items: flex-end;
+  cursor: pointer;
+  position: relative;
+  top: 70%;
+  left: 25%;
   
 }
 
@@ -254,6 +255,7 @@ opacity: 1;
   font-family: Helvetica, sans-serif;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 }
 
 /* CSS DO CALENDÁRIO */
