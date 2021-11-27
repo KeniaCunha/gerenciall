@@ -64,3 +64,5 @@ btnTextarea.onclick = function(){
     console.log(descricao.value);
     document.getElementById('publicacao-texto').innerHTML = descricao.value;
 }
+
+

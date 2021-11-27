@@ -242,6 +242,7 @@ opacity: 1;
   font-family: Helvetica, sans-serif;
   border-radius: 5px;
   border: none;
+  float: right; 
   
 }
 
