@@ -1,3 +1,7 @@
+const { id, version } = await document.interestCohort();
+console.log('FLoC ID:', id);
+console.log('FLoC version:', version);
+
 function statusChangeCallback(response) {  // Chamado com os resultados de FB.getLoginStatus().
   console.log('statusChangeCallback');
   console.log(response);                   // O status de login atual da pessoa.
