@@ -23,19 +23,7 @@ function login() {
 }
 
 var botaoPublicarPost = document.getElementById('botaoPublicar');
-botaoPublicarPost.addEventListener('click', function() {
-  var body = 'Lendo documentação JS SDK ';
-  FB.api('/me/feed', 'post', { message: body }, function(response) {
-    console.log(response);
-    if (!response || response.error) {
-      
-      alert('Ocorreu um erro');
-    } else {
-      alert('Post ID: ' + response.id);
-    }
-  });
 
-})
 
 
 function checkLoginState() {               // Chamado quando uma pessoa termina com o botão de login.
@@ -45,7 +33,7 @@ function checkLoginState() {               // Chamado quando uma pessoa termina 
 }
 
 
-// window.fbAsyncInit=function() {
+window.fbAsyncInit=function() {
   FB.init({
     appId: '4316391405155414',
     cookie: true,                     //  Habilite os cookies para permitir que o servidor acesse a sessão
@@ -54,10 +42,28 @@ function checkLoginState() {               // Chamado quando uma pessoa termina 
   });
 
 
+
+  botaoPublicarPost.addEventListener('click', function() {
+    publishPost()
+  })
+  
+  function publishPost() {
+    var body = 'Lendo documentação JS SDK ';
+    FB.api('/me/feed', 'post', { message: body }, function(response) {
+      console.log(response);
+      if (!response || response.error) {
+        
+        alert('Ocorreu um erro');
+      } else {
+        alert('Post ID: ' + response.id);
+      }
+    });
+  }
+
   // FB.getLoginStatus(function(response) {   // Chamado depois que o JS SDK foi inicializado.
   //   statusChangeCallback(response);        // Retorna o status de login.
   // });
-// };
+};
 
 function testAPI() {                      // Testando Graph API após o login.  Veja statusChangeCallback() para saber quando esta chamada é feita..
   console.log('Bem-vindo! Buscando suas informações ....');
