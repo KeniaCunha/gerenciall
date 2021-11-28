@@ -19,7 +19,7 @@ function login() {
     } else {
       // a pessoa não está logada em sua página da web ou não podemos saber. 
     }
-  }, { scope: 'publish_to_groups,pages_read_engagement,pages_manage_posts' });
+  }, { scope: 'publish_to_groups,pages_read_engagement,pages_manage_posts', return_scopes: true });
 }
 
 var botaoPublicarPost = document.getElementById('botaoPublicar');
@@ -45,7 +45,7 @@ function checkLoginState() {               // Chamado quando uma pessoa termina 
 }
 
 
-window.fbAsyncInit=function() {
+// window.fbAsyncInit=function() {
   FB.init({
     appId: '4316391405155414',
     cookie: true,                     //  Habilite os cookies para permitir que o servidor acesse a sessão
@@ -57,7 +57,7 @@ window.fbAsyncInit=function() {
   // FB.getLoginStatus(function(response) {   // Chamado depois que o JS SDK foi inicializado.
   //   statusChangeCallback(response);        // Retorna o status de login.
   // });
-};
+// };
 
 function testAPI() {                      // Testando Graph API após o login.  Veja statusChangeCallback() para saber quando esta chamada é feita..
   console.log('Bem-vindo! Buscando suas informações ....');
