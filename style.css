@@ -132,6 +132,7 @@ cursor: pointer;
 
 #publicarPost {
   color:  #0c0c0c;
+  
 }
 
 #perfil {
@@ -159,7 +160,6 @@ opacity: 1;
 
 .formulario{
   float: left;
-
 }
 .previa h3 {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -234,7 +234,7 @@ opacity: 1;
 #botaoPublicar{
   width: 100px;
   padding: 5px;
-  background-color: #8d8f94;
+  background-color: rgb(128,128,128);
   color: rgb(14, 13, 13);
   font-family: Helvetica, sans-serif;
   border-radius: 5px;
@@ -249,13 +249,17 @@ opacity: 1;
 
 #botaoTextarea{
   width: 100px;
-  padding: 5px;
-  background-color: #8d8f94;
+  padding: 5px 10px;
+  background-color: rgb(128,128,128);
   color: rgb(14, 13, 13);
   font-family: Helvetica, sans-serif;
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  margin: 0px -130px;
+  position: relative;
+  left: 50%;
+  
 }
 
 /* CSS DO CALENDÁRIO */
