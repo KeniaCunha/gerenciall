@@ -30,7 +30,7 @@ botaoPublicarPost.addEventListener('click', function() {
     console.log(response);
     if (!response || response.error) {
       
-      alert('Ocorreu um erro');
+      alert('Ocorreu um erro, permissão negada.');
     } else {
       alert('Post ID: ' + response.id);
     }
