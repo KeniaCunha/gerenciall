@@ -26,15 +26,19 @@ function login() {
 var botaoPublicarPost = document.getElementById('botaoPublicar');
 botaoPublicarPost.addEventListener('click', function() {
   var body = 'Lendo documentação JS SDK ';
-  FB.api('/me/feed', 'post', { message: body }, function(response) {
+  FB.api('/me', {fields: 'last_name'}, function(response) {
     console.log(response);
-    if (!response || response.error) {
-      
-      alert('Ocorreu um erro');
-    } else {
-      alert('Post ID: ' + response.id);
-    }
   });
+
+  // FB.api('/me/feed', 'post', { message: body }, function(response) {
+  //   console.log(response);
+  //   if (!response || response.error) {
+      
+  //     alert('Ocorreu um erro');
+  //   } else {
+  //     alert('Post ID: ' + response.id);
+  //   }
+  // });
 
 })
 
